@@ -34,25 +34,28 @@
                         <button type="submit" style="background: gray;" class="btn">Chicago</button>
                         <button type="submit" style="background: gray;" class="btn">New York City</button>
                         <button type="submit" style="background: gray;" class="btn">Los Angeles</button>
-                        <button type="submit" style="background: gray;" class="btn">Washington DC</button>                                               
+                        <button type="submit" style="background: gray;" class="btn">Washington DC</button>
                     </ul>
                 </form>
-                <div id="content-right" class="col-md-4">
-                    <div id="current-weather"></div>
-                    <div id="five-day-forcast"></div>
-                </div>
-
-
-
             </div>
-
-
-
-
-
         </div>
     </main>
-
+    <!-- 5 Day Forcast Boxes Start Here -->
+    <div class="container">
+        <!--Box for Day 1  -->
+        <div class="row col-sm-6 col-md-6 col-lg-2 fiveday">
+            <p>Day One:<span id="local-five-day-one"></span></p>
+            <p>Temp: <span id="local-five-temp-one" </span> &deg: F</p>
+            <p>Wind: <span id="local-five-temp-one" </span>MPH</p>
+            <p>Humidity: <span id="local-five-temp-one" </span>%</p>
+        </div>
+        <div class="row col-sm-6 col-md-6 col-lg-2 fiveday">
+            <p>Day Two:<span id="local-five-day-one"></span></p>
+            <p>Temp: <span id="local-five-temp-one" </span> &deg: F</p>
+            <p>Wind: <span id="local-five-temp-one" </span>MPH</p>
+            <p>Humidity: <span id="local-five-temp-one" </span>%</p>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

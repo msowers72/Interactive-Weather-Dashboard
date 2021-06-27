@@ -38,4 +38,25 @@ input[type="text"] {
     transform: translate(-1px, -1px);
   }
 
+
+  .row {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 20px;
+      border-radius: 10px;
+  }
   
+  .fiveday {
+      border: 1px solid black;
+      background-color: darkblue;
+      width: auto;
+      height: auto; 
+      float: left;
+      padding: 5px;    
+
+  }
+
+  p {
+      color: white;
+  }
