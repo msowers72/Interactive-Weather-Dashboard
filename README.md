@@ -4,7 +4,7 @@
 Build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 ## User Story
-This application will allow travlers to check the weather outlook for multiple cities. Extreme, weather can have major affects on travel plans and even a personal safety. By accessing this interactive weather application travelers will have the ability to plan accordingly. 
+This application will allow travlers to check the weather outlook for multiple cities. Extreme, weather can have major affects on travel plans and even personal safety. By accessing this interactive weather application travelers will have the ability to plan accordingly. 
 
 ## Acceptance Criteria
 ```
