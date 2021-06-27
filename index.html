@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <!-- Set-up the head and css links -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,43 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
-
+    <!--inital set-up for the body  -->
 <body class="min-100-vh flex-column">
-    <header class="p-3 text-center text-white bg-primary">
+    <!-- set-up the header -->
+    <header class="p-2 text-center text-white bg-primary">
         <h1>Weather Dashboard</h1>
     </header>
+    <!-- main content section -->
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                    <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+                    <button type="submit" class="btn">Search</button>
+                    <div class="row">
+                        <div class="col-11"> </div>
+                    </div>
+                    <ul class="list-group" id="city-results">
+                        <li class="list-group-item" style="text-align: center">Austin</li>
+                        <li class="list-group-item" style="text-align: center">Chicago</li>
+                        <li class="list-group-item" style="text-align: center">New York City</li>
+                        <li class="list-group-item" style="text-align: center">Los Angeles</li>
+                        <li class="list-group-item" style="text-align: center">Washington DC</li>
+                    </ul>
+                </form>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </main>
 
 
 
