@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Set-up the head and css links -->
+<!-- Set-up the head and css links -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
-    <!--inital set-up for the body  -->
+<!--inital set-up for the body  -->
+
 <body class="min-100-vh flex-column">
     <!-- set-up the header -->
     <header class="p-2 text-center text-white bg-primary">
@@ -28,13 +30,17 @@
                         <div class="col-11"> </div>
                     </div>
                     <ul class="list-group" id="city-results">
-                        <li class="list-group-item" style="text-align: center">Austin</li>
-                        <li class="list-group-item" style="text-align: center">Chicago</li>
-                        <li class="list-group-item" style="text-align: center">New York City</li>
-                        <li class="list-group-item" style="text-align: center">Los Angeles</li>
-                        <li class="list-group-item" style="text-align: center">Washington DC</li>
+                        <button type="submit" style="background: gray;" class="btn">Austin</button>
+                        <button type="submit" style="background: gray;" class="btn">Chicago</button>
+                        <button type="submit" style="background: gray;" class="btn">New York City</button>
+                        <button type="submit" style="background: gray;" class="btn">Los Angeles</button>
+                        <button type="submit" style="background: gray;" class="btn">Washington DC</button>                                               
                     </ul>
                 </form>
+                <div id="content-right" class="col-md-4">
+                    <div id="current-weather"></div>
+                    <div id="five-day-forcast"></div>
+                </div>
 
 
 
