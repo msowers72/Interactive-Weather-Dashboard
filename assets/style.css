@@ -8,7 +8,14 @@
 margin: 5px;
 }
 
-
+input[type=text], select, textarea{
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
 
 
 
