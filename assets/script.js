@@ -11,5 +11,8 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city*/
 
 var APIKEY = "";
-var cityName = document.getElementById("#city-name");
+var cityName = document.querySelector("#city-name");
+var searchBtn = document.querySelector("#search");
+var clearHistory = document.querySelector("#clear-history");
+var cityHistory = document.querySelector("#city-history");
 
