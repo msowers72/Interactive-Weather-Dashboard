@@ -27,11 +27,11 @@
                 <h3>Search for a City:</h3>
                 <div class="input-group mb-3">
                     <input type="text" class="input-box" id="city-name" placeholder="Enter City">
-                    <button class="btn btn-primary" type="button" id="search">
+                    <button type="button" class="btn btn-primary"  id="search" value="city">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history"> Clear History</button>
+                <!-- <button class="btn btn-primary mb-3" type="button" id="clear-history"> Clear History</button> -->
                 <form id="city-history">
                     <input type="text" style="background-color: gray;" value="">
                     <input type="text" style="background-color: gray;" value="">
@@ -42,7 +42,7 @@
                 </form>
             </div>
             <!--main weather display and five day forcast  -->
-            <div class="card-body" style="border: solid;"  id="today-weather">
+            <div class="card-body" style="border: solid;" id="today-weather">
                 <h3 id="city-name" class="city-name align-middle">Baltimore</h3>
                 <img src="" alt="">
                 <p id="temperature">Temperature:</p>
@@ -58,7 +58,7 @@
                         <img src="" alt="">
                         <p>Temp: F</p>
                         <p>Humidity: %</p>
-                    </div>                    
+                    </div>
                     <div class="col-md-2 forcast bg-primary text-white m-2 rounded">
                         <p class="mt-3 mb-0 forecast-date"></p>
                         <img src="" alt="">
