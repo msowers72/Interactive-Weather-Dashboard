@@ -34,7 +34,10 @@ function renderButton(e) {
 }
 
 function getApi() {
-    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q="  + cityName.value + "&appid=" + key;
+
+  console.log(cityName.value)
+
   
     fetch(requestUrl)
       .then(function (response) {
