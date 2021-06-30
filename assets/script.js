@@ -10,7 +10,7 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city*/
 
-var Key = "0c6c7c6766f0c82e84b46a07f2439d14";
+var key = "0c6c7c6766f0c82e84b46a07f2439d14";
 var cityName = document.querySelector("#city-name");
 var searchBtn = document.querySelector("button");
 var clearHistory = document.querySelector("#clear-history");
@@ -19,7 +19,6 @@ var formEl = document.querySelector('form');
 var  temperature = document.querySelector('#temperature');
 
 var searchFormEl = document.querySelector('#city-history');
-var requestUrl = 'https://api.github.com/repos/twitter/chill/issues?per_page=5';
 var paragraph = document.querySelector('p');
 
 
@@ -34,10 +33,8 @@ function renderButton(e) {
     
 }
 
-searchBtn.addEventListener('click', renderButton);
-
 function getApi() {
-    var requestUrl = 'https://api.github.com/users?per_page=5';
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
   
     fetch(requestUrl)
       .then(function (response) {
@@ -62,4 +59,10 @@ function getApi() {
         }
       });
   }
+
+
+
+
+
   searchBtn.addEventListener('click', getApi);
+  searchBtn.addEventListener('click', renderButton);
