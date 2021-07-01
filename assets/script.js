@@ -12,7 +12,7 @@ THEN I am again presented with current and future conditions for that city*/
 
 var key = "0c6c7c6766f0c82e84b46a07f2439d14";
 var cityName = document.querySelector("#city-name");
-var searchBtn = document.querySelector("button");
+var searchBtn = document.querySelector(".btn");
 var clearHistory = document.querySelector("#clear-history");
 var cityHistory = document.querySelector("#city-history");
 var formEl = document.querySelector('form');
@@ -30,11 +30,13 @@ var paragraph = document.querySelector('p');
 function renderButton(e) {
     e.preventDefault();   
     console.log("I'm working")
+
+    
     
 }
 
 function getApi() {
-    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q="  + cityName.value + "&appid=" + key;
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName.value + "&appid=" + key;
 
   console.log(cityName.value)
 
