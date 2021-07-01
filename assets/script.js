@@ -23,6 +23,7 @@ var paragraph = document.querySelector('p');
 var timeEl = document.querySelector('.time')
 var dateEl = document.querySelector('.date');
 var timeZoneEl = document.querySelector('.time-zone');
+var todayWeather = document.querySelector('#today-weather')
 
 
 
@@ -60,11 +61,27 @@ function getWeatherData () {
 
     var {latitude, longitude } = success.coords;
 
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&appid=${API_Key}`).then(res => res.json()).then(data => {
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_Key}`).then(res => res.json()).then(data => {
 
-      console.log(data);     
+      console.log(data); 
+      
+      displayWeatherData(data);
     })
    })
+}
+
+function displayWeatherData (data){
+var [temperature, humidity, wind_speed, uvi] = data.current;
+
+todayWeather.innerHTML =
+`<div id="today-weather">
+    <div> id="temperature">Temperature:</div>
+    <div>${temperature}</div>
+    <p id="humidity"> Humidity:</p>
+    <p id="wind-speed">Wind Speed:</p>
+    <p id="UV-index"> UV Index:</p>
+</div>`;
+
 }
 
 
