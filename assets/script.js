@@ -27,8 +27,10 @@ var timeEl = document.querySelector('.time')
 var dateEl = document.querySelector('.date');
 var timeZoneEl = document.querySelector('.time-zone');
 var todayWeather = document.querySelector('#today-weather')
+var dt = new Date();
 
-
+// added date to the web page
+document.getElementById('date-time').innerHTML = dt.toDateString();
 
 // Time interval function
 setInterval(() => {
