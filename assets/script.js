@@ -30,7 +30,7 @@ var todayWeather = document.querySelector('#today-weather')
 
 
 
-
+// Time interval function
 setInterval(() => {
   var time = new Date();
   var month = time.getMonth();
@@ -41,22 +41,22 @@ setInterval(() => {
   var minutes = time.getMinutes();
   var ampm = hour >= 12 ? 'PM' : 'AM'
 
-  timeEl.innerHTML = (hoursIn12HrFormat < 10? '0' +hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0' +minutes: minutes) + ' ' + `<span id="am-pm">${ampm}</span>`
+  timeEl.innerHTML = (hoursIn12HrFormat < 10 ? '0' + hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + `<span id="am-pm">${ampm}</span>`
 
 }, 1000);
 
 
 
 
-
+//button test function
 function renderButton(e) {
   e.preventDefault();
   console.log("I'm working")
-
-
+  console.log("next step")
 
 }
 
+// get weather data from the API
 getWeatherData();
 function getWeatherData() {
   navigator.geolocation.getCurrentPosition((success) => {
@@ -74,55 +74,33 @@ function getWeatherData() {
   })
 }
 
+// display weather elements from the API KEY
 function displayWeatherData(data) {
   console.log("in displayWeatherData")
   console.log(data)
   var { current: { temp, humidity, wind_speed, uvi, timezone } } = data;
   temperature.innerHTML = temp;
-  cityName.innerHTML = timezone; 
+  cityName.innerHTML = timezone;
   humidity.innerHTML = humidity;
   windSpeed.innerHTML = wind_speed;
   uvIndex.innerHTML = uvi;
 
 
-  
-
 }
 
 
-// function getApi() {
-//     var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName.value + "&appid=" + key;
-
-//   console.log(cityName.value)
-
-
-//     fetch(requestUrl)
-//       .then(function (response) {
-//         return response.json();
-//       })
-//       .then(function (data) {
-//         //Using console.log to examine the data
-//         console.log(data);
-//         for (var i = 0; i < data.length; i++) {
-//           //Creating a h3 element and a p element
-//           var userName = document.createElement('h3');
-//           var userUrl = document.createElement('p');
-
-//           //Setting the text of the h3 element and p element.
-//           userName.textContent = data[i].login;
-//           userUrl.textContent = data[i].url;
-
-//           //Appending the dynamically generated html to the div associated with the id="users"
-//           //Append will attach the element as the bottom most child.
-//           cityName.append(userName);
-//           temperature.append(userUrl);
-//         }
-//       });
-// }
 
 
 
 
+// document.addEventListener('DOMContentLoaded', getWeatherData);
 
 searchBtn.addEventListener('click', getWeatherData);
 searchBtn.addEventListener('click', renderButton);
+
+
+
+
+
+// example on how to check api data
+// https://api.openweathermap.org/data/2.5/onecall?lat=40.5&lon=74.4&exclude=hourly,minutely&units=metric&appid=0c6c7c6766f0c82e84b46a07f2439d14
