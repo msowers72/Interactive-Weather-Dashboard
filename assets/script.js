@@ -81,6 +81,8 @@ function displayWeatherData(data) {
   temperature.innerHTML = temp;
   cityName.innerHTML = timezone; 
   humidity.innerHTML = humidity;
+  windSpeed.innerHTML = wind_speed;
+  uvIndex.innerHTML = uvi;
 
 
   
