@@ -52,6 +52,8 @@ setInterval(() => {
 var cityFormEl = $('#city-form');
 var cityListEl = $('#city-list');
 
+
+// funciton to handle the city input
 function handleFormSubmit(event) {
   event.preventDefault();
 
