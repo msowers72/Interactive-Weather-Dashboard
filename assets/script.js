@@ -67,11 +67,11 @@ function handleFormSubmit(event) {
   );
   cityListItemEl.text(cityItem);
 
-  cityListItemEl.append(
-    '<button class="btn btn-danger btn-small delete-item-btn">Remove</button'
-  );
+  // cityListItemEl.append(
+  //   '<button class="btn btn-danger btn-small delete-item-btn">Remove</button'
+  // );
 
-  cityListItemEl.append(cityListItemEl);
+  cityListEl.append(cityListItemEl);
 
   $('input[name="city-name"]').val('');
 }
