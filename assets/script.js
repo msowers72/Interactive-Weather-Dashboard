@@ -29,6 +29,8 @@ var timeZoneEl = document.querySelector('.time-zone');
 var todayWeather = document.querySelector('#today-weather')
 var dt = new Date();
 
+
+
 // added date to the web page
 document.getElementById('date-time').innerHTML = dt.toDateString();
 
@@ -47,16 +49,49 @@ setInterval(() => {
 
 }, 1000);
 
+var cityFormEl = $('#city-form');
+var cityListEl = $('#city-list');
 
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  var cityItem = $('input[name="city-name"]').val();
+
+  if (!cityItem) {
+    console.log('No city name inputed');
+    return;
+  }
+
+  var cityListItemEl = $(
+    '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
+  );
+  cityListItemEl.text(cityItem);
+
+  cityListItemEl.append(
+    '<button class="btn btn-danger btn-small delete-item-btn">Remove</button'
+  );
+
+  cityListItemEl.append(cityListItemEl);
+
+  $('input[name="city-name"]').val('');
+}
+
+function handleRemoveItem(event) {
+
+  var btnClicked = $(event.target);
+
+  btnClicked.parent('li').remove();
+
+}
 
 
 //button test function
-function renderButton(e) {
-  e.preventDefault();
-  console.log("I'm working")
-  console.log("next step")
+// function renderButton(e) {
+//   e.preventDefault();
+//   console.log("I'm working")
+//   console.log("next step")
 
-}
+// }
 
 // get weather data from the API
 getWeatherData();
@@ -98,7 +133,10 @@ function displayWeatherData(data) {
 // document.addEventListener('DOMContentLoaded', getWeatherData);
 
 searchBtn.addEventListener('click', getWeatherData);
-searchBtn.addEventListener('click', renderButton);
+// searchBtn.addEventListener('click', renderButton);
+cityListEl.on('click', '.delete-item-btn', handleRemoveItem);
+cityFormEl.on('submit', handleFormSubmit);
+
 
 
 

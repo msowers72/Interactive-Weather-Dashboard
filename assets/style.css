@@ -9,15 +9,15 @@ margin: 5px;
 }
 
 form input[type=text], select, textarea{
-    width: 75%;
-    height: 35px;
-    margin: 10px;
-    padding: 5px;
+    width: 80%;
+    height: 20px;
+    margin: 0px;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     resize: vertical;
-    color: white;
+    color: black;
     font-size: 15px;
   }
 
