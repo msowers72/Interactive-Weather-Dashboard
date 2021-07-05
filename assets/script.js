@@ -110,6 +110,7 @@ function getWeatherData() {
 
         displayWeatherData(data);
       })
+      localStorage.setItem("latitude, longitude", JSON.stringify(latitude, longitude));
   })
 }
 
@@ -124,8 +125,10 @@ function displayWeatherData(data) {
   windSpeed.innerHTML = wind_speed;
   uvIndex.innerHTML = uvi;
 
-
+  var lastcity = JSON.parse(localStorage.getItem("latitude, longitude"));
 }
+
+
 
 
 
