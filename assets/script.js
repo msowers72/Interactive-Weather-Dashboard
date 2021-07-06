@@ -129,12 +129,6 @@ function displayWeatherData(data) {
 }
 
 
-
-
-
-
-
-
 // document.addEventListener('DOMContentLoaded', getWeatherData);
 
 searchBtn.addEventListener('click', getWeatherData);
